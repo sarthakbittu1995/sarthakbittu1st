@@ -1,7 +1,7 @@
 ({
-                doInit : function(component, event) {
-                 getAccontRecord : function( component ) {
-                 var action = component.get("c.getAccountRecord"); 
+       doInit : function(component, event) {
+       getAccontRecord : function( component ) {
+        var action = component.get("c.getAccountRecord"); 
 
         action.setCallback(this, function(response) {
             var state = response.getState(); 

@@ -4,12 +4,12 @@ List<Contact> listcc=trigger.isDelete? trigger.old:trigger.new;
     for(Contact c:listcc){
         accid.add(c.AccountId);
     }
-    List<Account> acc=[select name,(select id from Contacts) from Account where Id in:accid];
+    List<Account> acc=[select name,NoOfContactsss__c,(select id from Contacts) from Account where Id in:accid];
     
     for(Account a: acc){
         List<Contact> s=a.Contacts;
         System.debug('Account:' + a.Name + ' No. of Contacts: '+ s.size()); 
-        a.NoOfContactsss__c=s.size();
-        update a;
+        a.NoOfContactsss__c=s.size();       
     }
+    update acc;
 }

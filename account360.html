@@ -1,0 +1,39 @@
+<template>
+    <lightning-layout multiple-rows >
+
+                <lightning-button variant="brand" label="HDC" class="HDC"  value="HDC"  onclick={handleHDC}></lightning-button>&nbsp;&nbsp;
+        
+                 <lightning-button variant="brand" label="LDC" class="LDC" value="LDC" onclick={handleHDC} ></lightning-button>&nbsp;&nbsp;
+             
+                 <lightning-button variant="brand" label="LTG & LUM" class="LTGLUM" value="LTGLUM" onclick={handleHDC}></lightning-button>&nbsp;&nbsp;
+      
+                 <lightning-button variant="brand" label="EWA & SG" class="EWASG" value="EWASG" onclick={handleHDC}></lightning-button>
+           
+    </lightning-layout >
+<lightning-layout if:true={hdc}>
+    <div class="custom-box slds-p-around_medium slds-text-align_center slds-card slds-scrollable" style="height:100%;width:100%;" >
+            <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer slds-table_fixed-layout slds-table_resizable-cols" role="grid"> 
+                    <tbody>
+                            <tr class="slds-text-title_caps">
+                            <td>
+                               <center><h3> Sales</h3></center>
+                            </td>
+                            <td><center><h3> Value</h3></center></td>
+                            </tr>
+                            <tr class="slds-text-title_caps">
+                                <td> <center><h3> Outstanding</h3></center></td>
+                                <td><center><h3> Value</h3></center></td>
+                            </tr>
+                            <tr class="slds-text-title_caps">
+                                    <td><center><h3> Productivity & Efficiency</h3></center></td>
+                                    <td><center><h3> VALUE</h3></center></td>
+                            </tr>
+                            <tr class="slds-text-title_caps">
+                                    <td><center><h3>Red Flags</h3></center></td>
+                                    <td><center><h3> VALUE</h3></center></td>
+                            </tr>
+                    </tbody>
+            </table>
+    </div>
+</lightning-layout>
+</template>
